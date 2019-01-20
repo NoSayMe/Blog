@@ -5,25 +5,37 @@ Features
 
 Environment setup
 =================
-1. Install pipenv
+1 . Installation
+ ```
+sudo apt-get install python3
 
+sudo apt install python3-pip python3-dev libpq-dev postgresql postgresql-contrib nginx curl
+```
+2 . Installing, creating and running virtualenv
+ ```
+sudo apt install virtualenv
 
-New project kick-off
-====================
-How to fork it:
-1. Go to https://codecloud.web.att.com/projects/ST_BRATISLAVA/repos/template_django?fork
+virtualenv -p python3 venv_blog
 
+source venv_blog/bin/activate
+```
+3 . Setting up project requirements
+ ```
+pip3 install django
 
-Local development
-=================
-1. Set up DB connection:
-    ```
-    [DB_DEV]
-    ```
+pip3 install pillow
+```
+4 . Installing + Cloning Git repository
+ ```
+sudo apt-get install git
 
-1. Set up proxy: put the following content to `~/.docker/config.json`
-   
-    ```json
-    text
-    ```
-   
+git clone https://github.com/NoSayMe/Blog.git
+```
+5 . Running our project
+ ```
+python3 manage.py runserver 0.0.0.0:8000
+```
+or
+ ```
+nohub python3 manage.py runserver 0.0.0.0:8000 &
+```
