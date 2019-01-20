@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+            integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+            integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+            crossorigin="anonymous"></script>
+    <title>My Blog</title>
+</head>
+
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'home' %}">Home</a>
+            </li>
+        </ul>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'about' %}">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'cv' %}">CV</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.linkedin.com/in/juraj-gabriel-ab3027109/">LinkedIn</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link"
+                       href="https://github.com/NoSayMe/online_kurzy/tree/blog/django/Blog/blog">GitHub</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+    <br/>
+    <br/>
+    <u><h2>Something about me</h2></u>
+    <br/>
+    <br/>
+    <p>Approachable and friendly individual who has a determined and positive attitude, has communication and
+        organisational skills combined with soft skills. Is co-operative and confident when working within a team or
+        independently. Adapts competently to new situations, and excels when under pressure.
+        <br/>
+        <br/>
+        Is attracted to an environment, where focus is towards innovation and communication.
+        <br/>
+        <br/>
+        Self thought programmer with experience in Python, Django and some basic knowledge of HTML. Very motivated to
+        improve and learn as much as possible. It is important to be given the opportunity to develop in a company.
+        Web development for me is a great
+        way
+        to learn the basic and core concepts of programming and deployment and to get the skill set required to become
+        an
+        essential part of the team and to bring value.
+        <br/>
+        <br/>
+        Finished a couple of online courses supplemented by various learning websites, reading documentations as well as
+        some youtube videos. This is one of my projects, but the first one to be actually deployed via AWS.
+        Check my blog to see more of the work that has been done so far, feel free to look at all my code at my personal
+        GitHub repository and you can check
+        the CV section or go directly to my
+        personal linkedIn in the top menu.
+        <br/>
+        <br/>
+        Thanks for a visit.
+        <br/>
+        <br/>
+        Enjoy!</p>
+    <hr/>
+</div>
+</body>
+</html>
