@@ -8,7 +8,6 @@ class Post(models.Model):
     image = models.ImageField(upload_to='media/')
     body = models.TextField()
 
-
     def __str__(self):
         return self.title
 
@@ -16,4 +15,9 @@ class Post(models.Model):
         return self.pub_date.strftime('%b %e %Y')
 
     def summary(self):
-        return self.body[:290]
+        self.size = 200
+        summary_text = self.body[:self.size]
+        if summary_text[-1] == " ":
+            return summary_text[:-1]
+        else:
+            return summary_text

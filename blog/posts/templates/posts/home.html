@@ -66,10 +66,13 @@
     <span class="glyphicon glyphicon-time" aria-hidden="true"></span> {{ post.pub_date_pretty }}
     <br/>
     <div class="text-left">
-        <img src="{{ post.image.url }}" class="rounded" style="max-height:250px;"/>
+        <a href="{% url 'post_detail' post.id %}">
+            <img src="{{ post.image.url }}" class="rounded" style="max-height:250px;"/>
+        </a>
     </div>
     <br/>
-    <p style="font-size:120%">{{ post.summary }}  ....</p>
+    <p style="font-size:120%">{{ post.summary }}<a href="{% url 'post_detail' post.id %}">...</a></p>
+    </body>
     <hr/>
     {% endfor %}
 

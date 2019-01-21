@@ -14,8 +14,8 @@ def post_details(request, post_id):
     post = get_object_or_404(Post, pk=post_id)
     return render(request, 'posts/posts_detail.html', {'post':post})
 
-def cv(request):
-    return render(request, 'posts/cv.html')
+def cv(requests):
+    return render(requests, 'posts/cv.html')
 
 def download(request):
     file_path = os.path.join(settings.MEDIA_ROOT, 'posts/static/juraj_gabriel_cv.pdf')
