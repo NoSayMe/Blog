@@ -18,7 +18,7 @@ def cv(requests):
     return render(requests, 'posts/cv.html')
 
 def download(request):
-    file_path = os.path.join(settings.MEDIA_ROOT, 'posts/static/juraj_gabriel_cv1.pdf')
+    file_path = os.path.join(settings.MEDIA_ROOT, 'posts/static/juraj_gabriel_cv_1.pdf')
     if os.path.exists(file_path):
         with open(file_path, 'rb') as fh:
             response = HttpResponse(fh.read(), content_type='application/pdf')
