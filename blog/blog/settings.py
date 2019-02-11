@@ -123,3 +123,9 @@ USE_TZ = True
 STATIC_URL = '/static/'
 MEDIA_URL = '/pics/'
 MEDIA_ROOT = BASE_DIR
+
+EMAIL_HOST = 'smtp.sendgrid.net'
+EMAIL_HOST_USER = 'apikey'
+EMAIL_HOST_PASSWORD = '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'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
