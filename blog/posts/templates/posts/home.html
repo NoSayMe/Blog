@@ -1,31 +1,57 @@
 {% extends 'base.html' %}
-
 {% block content %}
+{% load static %}
 
-    <br/>
-    <h1 class="text-center">Welcome to my Blog!</h1>
-    <br/>
-    {% load static %}
-    <img src="{% static 'home.jpg' %}" class="img-fluid rounded mx-auto d-block" alt="Responsive image">
-    <br/>
-    <br/>
-    <h2>Latest Posts</h2>
-    <hr/>
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+<script src="{% static 'js/script.js' %}"></script>
 
-    {% for post in posts.all %}
-    <a class="q qs" href="{% url 'post_detail' post.id %}"><h3>{{ post.title }}</h3></a>
-    <span class="glyphicon glyphicon-time" aria-hidden="true"></span> {{ post.pub_date_pretty }}
-    <br/>
-    <div class="text-left">
-        <a href="{% url 'post_detail' post.id %}">
-            <img src="{{ post.image.url }}" class="rounded" style="max-height:250px;"/>
-        </a>
-    </div>
-    <br/>
-    <p style="font-size:120%">{{ post.summary }}<a href="{% url 'post_detail' post.id %}">...</a></p>
-    </body>
-    <hr/>
-    {% endfor %}
+<br/>
+<h1 class="text-center">Welcome to my Blog!</h1>
+<br/>
+<br/>
+<div class="slideshow-container">
+  <div class="mySlides">
+    <img src="{% static 'home2.jpg' %}" style="width:100%">
+    <div class="text">Mountains</div>
+  </div>
+  <div class="mySlides">
+    <img src="{% static 'home3.jpg' %}" style="width:100%">
+    <div class="text">Landscape</div>
+  </div>
+  <div class="mySlides">
+    <img src="{% static 'home4.jpg' %}" style="width:100%">
+    <div class="text">Forest</div>
+  </div>
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+<br/>
+<br/>
+<h2>Latest Posts</h2>
+<hr/>
+
+{% for post in posts.all %}
+
+<a class="q qs" href="{% url 'post_detail' post.id %}"><h3>{{ post.title }}</h3></a>
+<span class="glyphicon glyphicon-time" aria-hidden="true"></span> {{ post.pub_date_pretty }}
+<br/>
+<div class="text-left">
+    <a href="{% url 'post_detail' post.id %}">
+        <img src="{{ post.image.url }}" class="rounded" style="max-height:250px;"/>
+    </a>
+</div>
+<br/>
+<p style="font-size:120%">{{ post.summary }}<a href="{% url 'post_detail' post.id %}">...</a></p>
+</body>
+<hr/>
+
+{% endfor %}
 
 <div align="center">
     <a class="q qs" href="#">Back to Top</a>
