@@ -13,9 +13,9 @@
 .prev, .next {
   cursor: pointer;
   position: absolute;
-  top: 0%;
+  top: 40%;
   width: auto;
-  padding: 26.5% 16px;
+  padding: 2% 16px;
   color: white;
   font-weight: bold;
   font-size: 20px;
